@@ -1,0 +1,7 @@
+users_name: ansibleUser
+users_group: ansibleUser
+users_password: ChangeMe!!
+users_home: "/home/{{ users_name }}"
+
+uploadPublicKey: true
+local_public_key:
