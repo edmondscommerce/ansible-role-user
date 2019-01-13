@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: edmondscommerce.user
   author: Edmonds Commerce
   description: A role to create and configure Linux users the way we want
   company: Edmonds Commerce

@@ -10,6 +10,10 @@
     password: "{{ users_password }}"
     update_password: always
     state: present
+- name: Ensure sudo is installed
+  package:
+    name: sudo
+    state: present
 - name: Add user to sudoers
   template:
     src: ./templates/etc/sudoers.d/10-grant-sudo-access.j2
