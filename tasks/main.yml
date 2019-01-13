@@ -10,9 +10,11 @@
     password: "{{ users_password }}"
     update_password: always
     state: present
-- name: Ensure sudo is installed
+- name: Ensure sudo & vim is installed
   package:
-    name: sudo
+    name:
+      - sudo
+      - vim-enhanced
     state: present
 - name: Add user to sudoers
   template:
