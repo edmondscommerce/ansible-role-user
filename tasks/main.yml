@@ -8,7 +8,7 @@
     name: "{{ users_name }}"
     groups: "{{ users_group }},wheel"
     append: Yes
-    password: "{{ users_password  | password_hash('sha512') }}"
+    password: "{{ users_password | string | password_hash('sha512', 'salty') }}"
     update_password: always
     state: present
 
