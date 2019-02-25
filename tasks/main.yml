@@ -36,18 +36,20 @@
     mode: 0700
 
 - name: Set a sensible bashrc file
-  template:
-    src: ./templates/home/user/.bashrc.j2
+  copy:
+    src: ./../templates/home/user/.bashrc
     dest: "{{ users_home }}/.bashrc"
     owner: "{{ users_name }}"
     group: "{{ users_group }}"
+    force: no
 
 - name: Set a sensible .vimrc file
-  template:
-    src: ./templates/home/user/.vimrc.j2
+  copy:
+    src: ./../templates/home/user/.vimrc
     dest: "{{ users_home}}/.vimrc"
     owner: "{{ users_name }}"
     group: "{{ users_group }}"
+    force: no
 
 - name: Setup authorized_key
   authorized_key:
