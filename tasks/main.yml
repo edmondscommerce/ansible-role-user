@@ -22,7 +22,7 @@
 - name: Add user to sudoers
   template:
     src: ./templates/etc/sudoers.d/10-grant-sudo-access.j2
-    dest: /etc/sudoers.d/10-grant-sudo-access
+    dest: "/etc/sudoers.d/10-grant-sudo-access-to-{{users_name}}"
     owner: root
     group: root
     mode: 0440
